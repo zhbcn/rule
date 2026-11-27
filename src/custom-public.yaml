@@ -23,3 +23,7 @@ domain_suffix:
   - protonvpn.ch
   - protonstatus.com
   - pm.me
+
+  # --- Orca ---
+  - orca.dev
+  - onorca.dev
