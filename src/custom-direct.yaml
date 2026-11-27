@@ -1,0 +1,39 @@
+# 自定义直连补充规则（目标策略组：DIRECT）
+# 精准覆盖 Windows 系统更新/驱动/基础系统服务，以及主流显卡/芯片组官方驱动下载 CDN。
+# 设计原则：仅直连大体积下载 CDN 与底层系统服务域名，刻意不直连官网网页、账号登录与云/AI 服务，
+# 避免出现“服务打不开、驱动下载却走代理节点”的问题。
+
+domain_suffix:
+  # --- Windows Update 与驱动/商店下载 CDN（补充上游 microsoft-cn 未覆盖的域名） ---
+  - windowsupdate.com
+  - update.microsoft.com
+  - delivery.mp.microsoft.com
+  - do.dsp.mp.microsoft.com
+  - emdl.ws.microsoft.com
+  - wustat.windows.com
+  - ntservicepack.microsoft.com
+  - definitionupdates.microsoft.com
+  - cdn.winget.microsoft.com
+  - displaycatalog.mp.microsoft.com
+
+  # --- Windows 基础系统服务（NCSI 联网检测 / NTP 时间 / WNS 推送 / 激活 / Defender 云保护） ---
+  - msftconnecttest.com
+  - msftncsi.com
+  - time.windows.com
+  - wns.windows.com
+  - notify.windows.com
+  - licensing.mp.microsoft.com
+  - activation.sls.microsoft.com
+  - wdcp.microsoft.com
+
+  # --- NVIDIA 驱动下载 CDN（仅下载域名；官网/登录/NVIDIA App 服务仍走代理） ---
+  - download.nvidia.com
+  - download.nvidia.cn
+
+  # --- AMD 驱动下载 CDN（仅下载域名；官网/支持页仍走代理） ---
+  - drivers.amd.com
+  - download.amd.com
+
+  # --- Intel 驱动下载 CDN（仅下载域名；官网/Intel DSA 扫描服务仍走代理） ---
+  - downloadmirror.intel.com
+  - download.intel.com
