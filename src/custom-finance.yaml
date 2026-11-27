@@ -1,0 +1,12 @@
+# 自定义传统金融分流规则（目标策略组：Finance）
+# 需排在 QuixoticHeart/rule-set 的 crypto 规则集之前，以截获被上游错位归入 crypto 的 Wise。
+
+domain_suffix:
+  # --- Wise ---
+  - wise.com
+  - transferwise.com
+
+  # --- Stripe ---
+  - stripe.com
+  - stripe.network
+  - stripecdn.com

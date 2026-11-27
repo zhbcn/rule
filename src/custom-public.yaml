@@ -1,0 +1,25 @@
+# 自定义通用代理补充规则（目标策略组：Public network）
+# 覆盖上游 QuixoticHeart/rule-set 暂无独立规则集的常用工具与隐私服务。
+
+domain_suffix:
+  # --- 1Password ---
+  - 1password.com
+  - 1passwordservices.com
+  - 1passwordusercontent.com
+  - 1password.ca
+  - 1password.eu
+  - agilebits.com
+
+  # --- Bitwarden ---
+  - bitwarden.com
+  - bitwarden.eu
+  - bitwarden.net
+
+  # --- Proton 系（注意避开上游 cn 中的同名干扰项 cproton.com） ---
+  - proton.me
+  - protonmail.com
+  - protonmail.ch
+  - protonvpn.com
+  - protonvpn.ch
+  - protonstatus.com
+  - pm.me

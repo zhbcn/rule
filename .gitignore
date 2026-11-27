@@ -1,0 +1,11 @@
+# Build outputs are published to the orphan `ruleset` branch by GitHub Actions
+dist/
+mihomo
+mihomo.exe
+
+# Local-only documentation (do not publish to GitHub)
+README.md
+AGENTS.md
+
+.DS_Store
+Thumbs.db
